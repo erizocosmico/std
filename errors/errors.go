@@ -1,7 +1,6 @@
 package errors
 
 import (
-	"fmt"
 	"log"
 	"os"
 
@@ -25,8 +24,4 @@ func CheckLog15Crit(err error) {
 		log15.Crit(err.Error())
 		os.Exit(1)
 	}
-}
-
-func Formatted(msg string, args ...interface{}) error {
-	return fmt.Errorf(msg, args...)
 }
